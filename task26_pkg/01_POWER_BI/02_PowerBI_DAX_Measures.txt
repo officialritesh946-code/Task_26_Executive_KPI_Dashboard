@@ -1,0 +1,75 @@
+-- VEDA TECHNOLOGY | Task 26 | Executive KPI Dashboard
+-- Table name assumed: 'Superstore'
+
+Total Sales =
+SUM('Superstore'[Sales])
+
+Total Profit =
+SUM('Superstore'[Profit])
+
+Profit Margin =
+DIVIDE([Total Profit], [Total Sales], 0)
+
+Orders =
+DISTINCTCOUNT('Superstore'[Order.ID])
+
+Customers =
+DISTINCTCOUNT('Superstore'[Customer.ID])
+
+Quantity Sold =
+SUM('Superstore'[Quantity])
+
+Average Order Value =
+DIVIDE([Total Sales], [Orders], 0)
+
+Shipping Cost =
+SUM('Superstore'[Shipping.Cost])
+
+Average Discount =
+AVERAGE('Superstore'[Discount])
+
+Average Ship Days =
+AVERAGE('Superstore'[Ship Days])
+
+Sales per Customer =
+DIVIDE([Total Sales], [Customers], 0)
+
+Profit per Order =
+DIVIDE([Total Profit], [Orders], 0)
+
+-- Time intelligence (requires a dedicated Date table)
+Sales LY =
+CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR('Date'[Date])
+)
+
+Sales YoY % =
+DIVIDE([Total Sales] - [Sales LY], [Sales LY], 0)
+
+Profit LY =
+CALCULATE(
+    [Total Profit],
+    SAMEPERIODLASTYEAR('Date'[Date])
+)
+
+Profit YoY % =
+DIVIDE([Total Profit] - [Profit LY], [Profit LY], 0)
+
+-- Date table
+Date =
+ADDCOLUMNS(
+    CALENDAR(
+        MIN('Superstore'[Order.Date]),
+        MAX('Superstore'[Order.Date])
+    ),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month", FORMAT([Date], "MMM"),
+    "Year-Month", FORMAT([Date], "YYYY-MM"),
+    "Quarter", "Q" & FORMAT([Date], "Q")
+)
+
+-- After creating Date:
+-- 1. Mark Date as a Date table using Date[Date]
+-- 2. Create relationship Date[Date] -> Superstore[Order.Date]

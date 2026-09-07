@@ -1,0 +1,21 @@
+🚀 Task 26 Completed | Executive KPI Dashboard
+
+I’m excited to share my latest Data Analytics internship project with VEDA TECHNOLOGY — an Executive KPI Dashboard built around the Superstore dataset.
+
+📊 The dashboard focuses on:
+• Total Sales & Total Profit
+• Profit Margin
+• Orders & Customers
+• Average Order Value
+• Monthly Sales & Profit Trends
+• Regional Sales Performance
+• Top Sub-Categories
+• Profitability Watchlist
+• Dynamic management filters
+
+🛠️ Tools & Skills:
+Power BI • DAX • Data Modeling • KPI Design • Data Visualization • Business Insights
+
+🎯 The objective was to turn transactional data into a clean, management-ready dashboard that helps decision-makers quickly identify performance trends and areas requiring attention.
+
+#PowerBI #DataAnalytics #BusinessIntelligence #DAX #DataVisualization #Dashboard #Analytics #VEDATechnology #Internship #DataAnalyst

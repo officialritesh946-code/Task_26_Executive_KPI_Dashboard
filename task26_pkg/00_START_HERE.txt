@@ -1,0 +1,11 @@
+TASK 26 – EXECUTIVE KPI DASHBOARD
+VEDA TECHNOLOGY
+
+Submission order:
+1. 01_POWER_BI/01_VEDA_Task_26_Executive_KPI_Dashboard.pbix  ← MAIN SUBMISSION FILE
+2. 02_DATA/01_Superstore_Cleaned_Dashboard_Data.csv
+3. 03_DOCUMENTATION/01_Task_26_Professional_Submission_Report.docx
+4. 04_PREVIEW/01_Task_26_Dashboard_Preview.png
+5. Other files are supporting DAX, theme, KPI definitions, README/build guide and LinkedIn content.
+
+The native Power BI PBIX has been added to this package as the primary deliverable.
